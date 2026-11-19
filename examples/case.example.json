@@ -1,0 +1,12 @@
+{
+  "case_id": "example-suite",
+  "question": "attention for translation",
+  "responses": ["crossref_cache.json"],
+  "screening": {"include": ["attention"], "exclude": ["gardening"]},
+  "gold": ["10.1/a", "10.1/c"],
+  "graph_records": [
+    {"id": "10.1/a", "title": "Attention for translation", "references": ["10.1/c"]},
+    {"id": "10.1/c", "title": "Attention in vision"}
+  ],
+  "seeds": ["10.1/a"]
+}
