@@ -5,6 +5,8 @@ description: "One literature pipeline covering search, screening, citation traci
 
 # litsuite — Literature Search Suite (retrieve · screen · trace · coverage)
 
+> **脚本路径**：本技能安装于 `/skills/weekly-skill/`，脚本绝对路径为 `/skills/weekly-skill/scripts/`（工作目录是 `/app/work`，不要用相对路径）。
+
 One pipeline for the whole retrieval track. The failure mode this skill exists to prevent: a result set with no screening rationale, no source provenance, no coverage statement, and no citation context.
 
 **Method in one line:** collect → normalize → dedupe → screen (include/exclude/must-have/year) → rank transparently → build citation graph + hop neighbourhoods → measure recall@k against a gold set → report included / excluded / omissions.
@@ -17,7 +19,7 @@ One pipeline for the whole retrieval track. The failure mode this skill exists t
 ## Pipeline
 
 ```bash
-python3 scripts/litsuite.py --case /input/case.json --work /app/work
+python3 /skills/weekly-skill/scripts/litsuite.py --case /input/case.json --work /app/work
 ```
 
 1. **Retrieve** — multi-source normalization (Crossref `message.items`, EuropePMC `resultList.result`, generic lists), query plan, DOI/title dedup.
